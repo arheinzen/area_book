@@ -1,0 +1,46 @@
+.header {
+    
+    height: 100px;
+    width: 100%;
+    
+}
+
+.scripture {
+    
+    margin-top: 10%;
+    margin-left: 10%;
+    color: #FBF2EF;
+    font-family: sans-serif;
+    
+    
+}
+
+.loginBox {
+
+/*    background-color: aliceblue;*/
+    height: 200px;
+    width: 200px;
+    
+}
+
+.loginTitle {
+    
+    height: 25px;
+    width: 50px;
+    margin: auto;
+}
+
+.loginField {
+    
+    height: 100px;
+    width: 200px;
+    margin-left: 12%;
+}
+
+.link {
+    
+    height: 25px;
+    width: 50px;
+    margin: auto;
+    
+}

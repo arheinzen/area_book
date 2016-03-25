@@ -1,0 +1,39 @@
+<!DOCTYPE html> {% load staticfiles %}
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>HomePage</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+
+<body background="{% static 'images/wheatfield1.jpg' %}">
+	<div class="bigPicture">
+
+		<div id="header" class="row">
+			<div class="col-md-12">
+				<h2 class="homeTitle col-md-6"> Mission Area Book </h2>
+				<div class="col-md-4"></div>
+				<h4 class="homeWard col-md-2"> Suncrest 3rd Ward Orem Suncrest Stake </h4>
+			</div>
+		</div>
+
+		<div class="space row"></div>
+
+		<div class="menuBar row">
+			<ul>
+				<li class="col-md-2"><a href="/main/home">Home</a></li>
+				<li class="col-md-2"><a href="/main/household">Families</a></li>
+				<li class="col-md-2"><a href="/main/wardmap">Ward Map</a></li>
+			</ul>
+		</div>
+
+
+
+	</div>
+
+</body>
+
+</html>

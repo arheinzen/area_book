@@ -1,0 +1,90 @@
+.homeTitle {
+	
+	color: white;
+	font-family: sans-serif;
+/*	background-color: red;*/
+}
+
+.homeWard {
+	
+	color: white;
+	font-family: sans-serif;
+	float: right;
+/*	background-color: red;*/
+}
+
+.space {
+	
+	height: 50px;
+/*	background-color: blue;*/
+}
+
+.menuBar {
+	
+	background-color: #A4A4A4;
+	height: 50px;
+	box-shadow: 0px 0px 10px black;
+}
+
+ul {
+	list-style-type: none;
+/*	margin: 10px;*/
+/*	padding: 0;*/
+/*	width: 200px;*/
+	background-color: #f1f1f1;
+}
+
+li a {
+	text-align:center;
+	display: block;
+	color: white;
+	font-family: sans-serif;
+	font-size: 25px;
+	padding: 8px 8px 8px 16px;
+	text-decoration: none;
+}
+
+li a.active {
+	background-color: #084B8A;
+	color: white;
+}
+
+li a:hover:not(.active) {
+/*	background-color: #084B8A;*/
+/*	opacity: .5;*/
+	color: white;
+/*	text-decoration: none;*/
+	
+}
+
+a.selected {
+  background-color:#1F75CC;
+  color:white;
+  z-index:100;
+}
+
+.messagepop {
+  background-color:#FFFFFF;
+  border:1px solid #999999;
+  cursor:default;
+  display:none;
+  margin-top: 15px;
+  position:absolute;
+  text-align:left;
+  width:394px;
+  z-index:50;
+  padding: 25px 25px 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 3px;
+  padding-left: 15px;
+  text-indent: -15px;
+}
+
+.messagepop p, .messagepop.div {
+  border-bottom: 1px solid #EFEFEF;
+  margin: 8px 0;
+  padding-bottom: 8px;
+}

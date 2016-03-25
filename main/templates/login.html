@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <title>LoginPage</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet"  href="{% static 'css/login.css' %}">
+
+    
+</head>
+
+<body background="{% static 'images/wheatfield1.jpg' %}">
+    <div class="bigPicture">
+   
+   
+    <div class="header">
+        
+        <div class="scripture">
+        <h4>...For behold the field is white already to harvest...</h4>    
+        </div>
+    
+    </div>
+    
+    <div class="row">
+    <div class="loginBox center-block">
+        
+        <div class="loginTitle">
+<!--            <h4> Login </h4>-->
+        </div>
+        
+        <div class="loginField">
+             <form>
+              Username:<br>
+              <input type="text" name="username">
+              <br>
+              Password:<br>
+              <input type="text" name="password">
+             </form>
+        </div>
+          
+        <div class="link">  
+          <a href="/main/home">
+          <button type="button">Login</button>   
+          </a>
+        </div>
+        
+    </div>   
+    </div>
+   
+    </div>
+</body>
+
+</html>

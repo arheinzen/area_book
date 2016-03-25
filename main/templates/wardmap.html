@@ -1,0 +1,47 @@
+<!DOCTYPE html> {% load staticfiles %}
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Ward Map</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="{% static 'css/wardmap.css' %}">
+</head>
+
+<body>
+	<div class="bigPicture">
+
+		<div id="header" class="row">
+			<div class="col-md-12">
+				<h2 class="homeTitle col-md-6"> Mission Area Book </h2>
+				<div class="col-md-4"></div>
+				<h4 class="homeWard col-md-2"> Suncrest 3rd Ward Orem Suncrest Stake </h4>
+			</div>
+		</div>
+
+		<div class="space row"></div>
+
+		<div class="menuBar row">
+			<ul>
+				<li class="col-md-2"><a href="/main/home">Home</a></li>
+				<li class="col-md-2"><a href="/main/household">Families</a></li>
+				<li class="col-md-2"><a href="/main/wardmap">Ward Map</a></li>
+			</ul>
+		</div>
+
+
+
+	</div>
+	</br>
+
+<div id="map">.</div>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="{% static 'js/wardmap.js' %}"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWaM_OZjZi9iB9rTYgXF9QXO2nvAcCOCQ&callback=initMap" type="text/javascript"></script>
+</body>
+
+</html>
+
+
+<!--AIzaSyDWaM_OZjZi9iB9rTYgXF9QXO2nvAcCOCQ-->

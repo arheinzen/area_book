@@ -1,0 +1,98 @@
+<!DOCTYPE html> {% load staticfiles %}
+
+
+<html lang="en">
+
+<head>
+
+
+	<meta charset="UTF-8">
+	<title>HouseHoldListView</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="{% static 'css/household.css' %}">
+
+</head>
+
+<body>
+	<div class="bigPicture">
+		<div class="messagepop pop">
+			
+			<form id="new_message" action="/messages">
+
+				<p>
+					Family Notes for:
+					<label id="lastName"></label>
+					{% for notes in notes %}
+					<text id="family_notes">{{ notes.notes_body }}</text>
+					{% endfor %}
+				</p>
+
+				<a class="close" href="/">Close</a>
+
+			</form>
+			
+		</div>
+
+
+
+		<div id="header" class="row">
+			<div class="col-md-12">
+				<h2 class="homeTitle col-md-6"> Mission Area Book </h2>
+				<div class="col-md-4"></div>
+				<h4 class="homeWard col-md-2"> Suncrest 3rd Ward Orem Suncrest Stake </h4>
+			</div>
+		</div>
+
+		<div class="space row"></div>
+
+		<div class="menuBar row">
+			<ul>
+				<li class="col-md-2"><a href="/main/home">Home</a></li>
+				<li class="col-md-2"><a href="/main/household">Families</a></li>
+				<li class="col-md-2"><a href="/main/wardmap">Ward Map</a></li>
+			</ul>
+		</div>
+		</br>
+		<div>
+			<table class="table table-striped">
+
+				{% for household in household_list %}
+
+				<tr>
+					<td>{{ household.address }}</td>
+				</tr>
+
+				{% for last_name in household.lastname_set.all %}
+
+				<tr>
+					<td>{% ifchanged household.address %}{% endifchanged %}</td>
+					<td>
+						<a class="lastName" href="/main/household">
+						{{ last_name.last_name }}
+						</a>
+					</td>
+				</tr>
+
+				{% for individual in last_name.individual_set.all %}
+
+
+				<td>{% ifchanged household.address %}{% endifchanged %}</td>
+				<td class="last_name">{% ifchanged last.name.last.name %}{% endifchanged %}</td>
+				<td class="family_notes" style="display: none;"> {{ individual.notes_body.notes_body }}</td>
+				<td class="firstName"> {{ individual.first_name }}</td>
+				<td class="age"> {{ individual.age }}</td>
+				<td class="sex"> {{ individual.sex }}</td>
+				<td class="familyRole"> {{ individual.family_role }}</td>
+				<td class="memberStatus"> {{ individual.member_status }}</td>
+				</tr>
+
+				{% endfor %} {% endfor %} {% endfor %}
+
+			</table>
+		</div>
+	</div>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="{% static 'js/household.js' %}"></script>
+</body>
+
+</html>

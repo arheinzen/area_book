@@ -1,0 +1,67 @@
+   <table class="table table-striped">
+   
+   {% for household in household_list %}
+              
+   <tr>
+   <td>{{ household.address }}</td>
+   </tr>
+   
+           {% for last_name in household.lastname_set.all %}
+               
+               <tr>     
+               <td>{% ifchanged household.address %}{% endifchanged %}</td>  
+               <td class="lastName">{{ last_name.last_name }}</td>
+               </tr>   
+               
+               {% for individual in last_name.individual_set.all %}
+               
+                    
+                   <td>{% ifchanged household.address %}{% endifchanged %}</td>  
+                   <td class="lastName">{% ifchanged last.name.last.name %}{%         endifchanged %}</td>
+               
+                   <td class="firstName"> {{ individual.first_name }}</td> 
+                   <td class="age"> {{ individual.age }}</td>
+                   <td class="sex"> {{ individual.sex }}</td>
+                   <td class="familyRole"> {{ individual.family_role }}</td>
+                   <td class="memberStatus">  {{ individual.member_status }}</td>
+                   </tr>
+               
+               {% endfor %}
+      
+           {% endfor %}
+
+   {% endfor %}
+   
+-------------------------------------------------------------------------------------
+
+      <table class="table">
+   
+   {% for household in household_list %}
+              
+   <tr>
+   <td>{{ household.address }}</td>
+   </tr>
+   
+           {% for last_name in household.lastname_set.all %}
+               
+               <tr>       
+               <td class="lastName">{{ last_name.last_name }}</td>
+               </tr>   
+               
+               {% for individual in last_name.individual_set.all %}
+               
+               <tr> 
+               <td class="firstName">{{ individual.first_name }}</td> 
+               <td class="age"> {{ individual.age }}</td>
+               <td class="sex"> {{ individual.sex }}</td>
+               <td class="familyRole"> {{ individual.family_role }}</td>
+               <td class="memberStatus">  {{ individual.member_status }}</td>
+               
+               
+               </tr>
+               
+               {% endfor %}
+      
+           {% endfor %}
+
+   {% endfor %}
